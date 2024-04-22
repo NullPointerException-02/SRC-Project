@@ -1,5 +1,6 @@
 package dotcom;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
@@ -73,12 +74,15 @@ public class App {
     public void insertProduct(Product product) {
         try (Connection connection = DriverManager.getConnection(url, username, password);
              PreparedStatement statement = connection.prepareStatement("INSERT INTO products (name, price, date) VALUES (?, ?, ?)")) {
-           /*TODO: write insertProduct method
-            * step 1: set values for the parameters in the SQL statememnt 
-            step 2: execute SQL statement to insert the product
-            
-            */
-             }
+		statement.setString(1, product.getName());
+		statement.setDouble(2, product.getDate());
+		SimpleDateFormat dateFormat = new SimpleDateFormat(MM/dd/yyyy);
+		String date = dateFormat.format(product.getDate());
+		statement.setString(3, date);
+		statement.executeUpdate();
+          } catch (SQLException e) {
+		e.printStackTrace();
+	}
     }
 
     public void deleteProduct(int productId) {
