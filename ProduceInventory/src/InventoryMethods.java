@@ -1,34 +1,34 @@
 import java.util.ArrayList;
 
 class Inventory {
-    private ArrayList<Produce> items;
+    private ArrayList<Product> items;
 
     public Inventory() {
         items = new ArrayList<>();
     }
 
-    public void addProduce(String name, double weight, int quantity) {
-        Produce produce = new Produce(name, weight, quantity);
-        items.add(produce);
+    public void addProduct(String name, double weight, int quantity) {
+        Product product = new Product(name, weight, quantity);
+        items.add(product);
     }
 
-    public void addToExistingEntry(String produceName, int quantityToAdd) {
-        for (Produce produce : items) {
-            if (produce.getName().equals(produceName)) {
-                int newQuantity = produce.getQuantity() + quantityToAdd;
-                produce.setQuantity(newQuantity);
+    public void addToExistingEntry(String productName, int quantityToAdd) {
+        for (Product product : items) {
+            if (product.getName().equals(productName)) {
+                int newQuantity = product.getQuantity() + quantityToAdd;
+                product.setQuantity(newQuantity);
                 return;
             }
         }
         System.out.println("Error: Produce item not found in inventory.");
     }
 
-    public void removeQuantity(String produceName, int quantityToRemove) {
-        for (Produce produce : items) {
-            if (produce.getName().equals(produceName)) {
-                int currentQuantity = produce.getQuantity();
+    public void removeQuantity(String productName, int quantityToRemove) {
+        for (Product product : items) {
+            if (product.getName().equals(productName)) {
+                int currentQuantity = product.getQuantity();
                 if (currentQuantity >= quantityToRemove) {
-                    produce.setQuantity(currentQuantity - quantityToRemove);
+                    product.setQuantity(currentQuantity - quantityToRemove);
                     return;
                 } else {
                     System.out.println("Error: Quantity to remove exceeds current quantity in inventory.");
@@ -38,11 +38,11 @@ class Inventory {
         }
         System.out.println("Error: Produce item not found in inventory.");
     }
-    public double calculateTotalWeight(String produceName) {
+    public double calculateTotalWeight(String productName) {
         double totalWeight = 0.0;
-        for (Produce produce : items) {
-            if (produce.getName().equals(produceName)) {
-                totalWeight += produce.getWeight() * produce.getQuantity();
+        for (Product product : items) {
+            if (product.getName().equals(productName)) {
+                totalWeight += product.getWeight() * product.getQuantity();
             }
         }
         return totalWeight;
