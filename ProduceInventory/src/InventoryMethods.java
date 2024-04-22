@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 class Inventory {
     private ArrayList<Product> items;
@@ -7,8 +8,8 @@ class Inventory {
         items = new ArrayList<>();
     }
 
-    public void addProduct(String name, double weight, int quantity) {
-        Product product = new Product(name, weight, quantity);
+    public void addProduct(String name, double weight, int quantity, Date dateAdded) {
+        Product product = new Product(name, weight, quantity, dateAdded);
         items.add(product);
     }
 
