@@ -13,8 +13,8 @@ class Inventory {
         items.add(product);
     }
 
-    public void addToExistingEntry(String productName, int quantityToAdd) {
-        for (Product product : items) {
+    public void addToProductQuantity(String productName, int quantityToAdd) {
+        for (Product product : products) {
             if (product.getName().equals(productName)) {
                 int newQuantity = product.getQuantity() + quantityToAdd;
                 product.setQuantity(newQuantity);
@@ -24,15 +24,15 @@ class Inventory {
         System.out.println("Error: Produce item not found in inventory.");
     }
 
-    public void removeQuantity(String productName, int quantityToRemove) {
-        for (Product product : items) {
+    public void removeProductQuantity(String productName, int quantityToRemove) {
+        for (Product product : products) {
             if (product.getName().equals(productName)) {
                 int currentQuantity = product.getQuantity();
                 if (currentQuantity >= quantityToRemove) {
                     product.setQuantity(currentQuantity - quantityToRemove);
                     return;
                 } else {
-                    System.out.println("Error: Quantity to remove exceeds current quantity in inventory.");
+                    System.out.println("Error: Quantity to remove exceeds the current quantity in the inventory.");
                     return;
                 }
             }
