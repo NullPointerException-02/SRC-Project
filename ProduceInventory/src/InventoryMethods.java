@@ -51,14 +51,14 @@ class Inventory {
         return totalWeight;
     }
     
-    public List<Product> searchForProdcuts(String productName) {
+    public List<Product> searchForProducts(String productName) {
         List<Product> matchingProducts = new ArrayList<>();
         for (Product prodcut : items) {
-            if (product.getName().equalsIsIgnoreCase(productName)) {
+            if (product.getName().equalsIgnoreCase(productName)) {
                 matchingProducts.add(product);
             }
         }
-            else {
+            if (matchingProducts.isEmpty()) {
                 System.out.println("Error: Produce item not found in inventory. Please enter a known produce item or create new.");
             }
         return matchingProducts;
@@ -73,7 +73,7 @@ class Inventory {
             System.out.println("Quantity: " + product.getQuantity());
             System.out.println("Date Added: " + product.getDateAdded());
         }
-        else{
+        else {
             System.out.println("Error: Produce item not found in inventory. Please enter a known produce item or create new.");
         }
     }
