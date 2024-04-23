@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+
+class Inventory {
+    private ArrayList<Produce> items;
+
+    public Inventory() {
+        items = new ArrayList<>();
+    }
+
+    public void addProduce(String name, double weight, int quantity) {
+        Produce produce = new product;
+        items.add(produce);
+    }
+
+    public void addToExistingEntry(String produceName, int quantityToAdd) {
+        for (Produce produce : items) {
+            if (produce.getName().equals(produceName)) {
+                int newQuantity = produce.getQuantity() + quantityToAdd;
+                produce.setQuantity(newQuantity);
+                return;
+            }
+        }
+        System.out.println("Error: Produce item not found in inventory.");
+    }
+
+    public void removeQuantity(String produceName, int quantityToRemove) {
+        for (Produce produce : items) {
+            if (produce.getName().equals(produceName)) {
+                int currentQuantity = produce.getQuantity();
+                if (currentQuantity >= quantityToRemove) {
+                    produce.setQuantity(currentQuantity - quantityToRemove);
+                    return;
+                } else {
+                    System.out.println("Error: Quantity to remove exceeds current quantity in inventory.");
+                    return;
+                }
+            }
+        }
+        System.out.println("Error: Produce item not found in inventory.");
+    }
+    public showProducts() {
+        /*TODO write showProducts method, a method that returns each product name, as well as a quantity 
+        ex: apple(5)
+            toothpaste(44) 
+            hand warmers(5)
+            Jacket(5)*/
+    }
+    public searchForProduct(String produceName){
+        /*
+        basic search implementation, searches the items (the arraylist that stores ALL of the items we are tracking)
+        and returns a specified object's information */
+    }
+}
+
