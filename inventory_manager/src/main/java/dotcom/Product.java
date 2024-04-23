@@ -4,13 +4,11 @@ import java.sql.Date;
 public class Product {
     private int id;
     private String name;
-    private double price;
     private Date date;
 
-    public Product(int id, String name, double price, Date date) {
+    public Product(int id, String name, Date date) {
         this.id = id;
         this.name = name;
-        this.price = price;
         this.date = date;
     }
 
@@ -22,10 +20,6 @@ public class Product {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     public Date getDate() {
         return date;
     }
@@ -35,7 +29,6 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
                 ", date=" + date +
                 '}';
     }
