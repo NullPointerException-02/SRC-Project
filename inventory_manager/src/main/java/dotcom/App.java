@@ -69,6 +69,16 @@ public class App {
         Return the list of products
 
         Return empty list in case of error */
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+		PreparedStatement statement = connection.prepareStatement("SELECT * FROM products")) {
+		ResultSet res = statement.executeQuery();
+		List<Product> lproducts = new ArrayList<Product>();
+		while (res.next()){
+			
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
     }
 
     public void insertProduct(Product product) {

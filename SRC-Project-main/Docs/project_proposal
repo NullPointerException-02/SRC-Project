@@ -1,0 +1,37 @@
+SRC Project Proposal - Null Pointer Exception
+
+Executive Summary
+Within the farm, there were many aspects that we could improve. We decided to focus on the produce, specifically, what’s coming in and going out. 
+Project Background
+When we visited the farm and spoke to the volunteers, they discussed the problems of keeping track of their produce inventory. Currently, they are keeping track of their harvest inventory on paper. It’s difficult for them to track how much they donate and produce each season. 
+
+Solution
+Our solution would consist of an automated inventory system for tracking how much produce is donated each week (or month, etc). This would help them keep the farm more organized and further their efficiency. This could also help set up the priority on certain produce items. There would be a program menu displaying the farm's produce, and they would pick which item they’re weighing. A scale would be attached to the computer, and the weight would be automatically input. This data would later be transferred onto an Excel sheet. 
+
+Deliverables and Goals
+We want to provide the farm with a more efficient and organized way of collecting data and creating a stronger foundation. This system would minimize human error and replace the existing paper system, leading to a better organization. Our goal with implementing this inventory system is to help the farm maintain a strong foundation by making the process of keeping track of inventory more streamlined. Having a streamlined inventory system is welcoming for beginners and will make it easier for volunteers to interact with the system. We aim to help the farm be as prepared as possible to keep up with demand for certain essential items.
+
+Required Resources
+The list of required resources is as follows:
+A large scale used to measure produce weight
+A PC/Laptop set up somewhere on the farm (Ideally where the produce will be weighed)
+
+Conclusion
+Our proposed automated inventory system offers a practical solution to the farm's current challenges in produce tracking. By replacing the manual paper system with a user-friendly program featuring scale and Excel integration, we aim to streamline data collection, minimize errors, and enhance overall efficiency.
+The project's goals center on providing the farm with a more organized foundation, better preparing them to meet the demand for essential items. By logging planting and harvest dates, we enable valuable insights into crop health, contributing to long-term sustainability.
+To implement this solution, the farm will need a large scale for measuring produce weight and a designated PC or laptop setup. We believe this system will improve day-to-day operations and create a more accessible and efficient environment for volunteers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
