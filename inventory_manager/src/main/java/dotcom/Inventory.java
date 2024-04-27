@@ -228,10 +228,11 @@ public class Inventory {
 
     /**
      * Populate the stored arrayList with Produce objects made up of the data in the file with the specified filename.
-     * The format for the stored data should be [Name],[Quantity],[Weight], each block mapped to their specified dataa and the commas are delimiters.
+     * The format for the stored data should be [Name],[Quantity],[Weight].
+     * Each block seperating a specific variable of the object with the commas as delimiters. Each object is seperated by a new line char.
      * If the data is read, prints a message indicating the data was saved successfully.
      * If an IOException occurs, outputs an error message with the description of the error.
-     * @param filename
+     * @param filename	The String containing the name of the file the data is taken from.
      */
     public void loadInventory(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
