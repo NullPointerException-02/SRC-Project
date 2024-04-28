@@ -16,7 +16,13 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+/**
+ * Class for an instant of an inventory storing products
+ */
 public class Inventory {
+    /**
+     * ArrayList used to store products in the format of the Produce class.
+     */
     private ArrayList<Produce> items;
 
     /**
@@ -89,7 +95,7 @@ public class Inventory {
     }
 
     /**
-     * Displays the interface for inputting the paramters (name, weight & quantity) of the object to add. 
+     * Displays the interface for inputting the paramters (name, weight and quantity) of the object to add. 
      * Once the [Add Produce] button is pressed, calls the addProduce method with the equivalent parameters passed.
      */
     public void showAddProductDialogue() {
@@ -253,16 +259,6 @@ public class Inventory {
             System.err.println("Error loading inventory data: " + e.getMessage());
         }
     }
-    
-
-
-
-
-
-
-
-
-
 }    
 
    
