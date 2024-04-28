@@ -14,8 +14,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
-        
         inventory.loadInventory("inventory.txt");
         
         // Add a shutdown hook to save the inventory when the program is closed
