@@ -1,7 +1,19 @@
 package dotcom;
+/**
+ * Instances of the Produce class represents the whole of one specific product, including the name, weight and quantity of that product.
+ */
 public class Produce {
+    /**
+     * A String storing the name of the product
+     */
     private String name;
-    private int quantity; // New field for quantity
+    /**
+     * An int storing the number of one product
+     */
+    private int quantity;
+    /**
+     * A double storing the weight of one unit of the product
+     */
     private double weight;
 
     /**
@@ -64,7 +76,5 @@ public class Produce {
     public String toStringPretty() {
         return "Name: " + name + "\nQuantity: " + quantity + "\nWeight: " + weight +"\n";
     }
-    
-    
 }
     
